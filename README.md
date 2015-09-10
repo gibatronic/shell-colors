@@ -30,3 +30,18 @@ echo -n 'Hi '
 color_blue $NAME
 echo ', nice to meet you!'
 ```
+
+## Functions
+
+After sourcing the library, the following functions will be available:
+
+```shell
+color_black <string>
+color_blue <string>
+color_cyan <string>
+color_green <string>
+color_magenta <string>
+color_red <string>
+color_white <string>
+color_yellow <string>
+```
