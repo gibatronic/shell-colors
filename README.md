@@ -13,7 +13,7 @@ basher install gibatronic/shell-colors
 Then source the library in your script with:
 
 ```shell
-. $(get-colors-lib-path)
+. $(shell-colors library-path)
 ```
 
 ## Example
@@ -23,7 +23,7 @@ Ask for the person's name, then print it in blue along with a nice message:
 ```shell
 #!/usr/bin/env bash
 
-. $(get-colors-lib-path)
+. $(shell-colors library-path)
 
 read -p 'What'"'"'s your name? ' NAME
 echo -n 'Hi '

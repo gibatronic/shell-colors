@@ -3,4 +3,4 @@
 .SILENT:
 
 test:
-	test/colors
+	test/shell-colors

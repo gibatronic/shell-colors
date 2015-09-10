@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-echo "$(cd "$(dirname "$0")/../lib"; pwd -P)/colors"

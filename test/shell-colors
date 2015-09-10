@@ -1,6 +1,6 @@
 #!/usr/bin/env bats
 
-. $(bin/get-colors-lib-path)
+. $(bin/shell-colors library-path)
 
 @test 'should return the expected ANSI escape sequence' {
   local A="$(color 0 'black')"
