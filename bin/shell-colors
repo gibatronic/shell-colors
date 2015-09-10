@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
 
 get_library_path() {
-  echo "$(cd "$(dirname "$0")/../lib"; pwd -P)/shell-colors"
+  [ -h "$0" ] && resolve_link "$0" || resolve_path "$0"
+}
+
+resolve_link() {
+  resolve_path $(readlink "$1")
+}
+
+resolve_path() {
+  echo "$(cd "$(dirname "$1")/../lib"; pwd -P)/shell-colors"
 }
 
 show_help() {
   echo ''
   echo '  Usage:'
-  echo "    $0 <command>"
+  echo "    shell-colors <command>"
   echo ''
   echo '  Commands:'
   echo '    help          show this message'
