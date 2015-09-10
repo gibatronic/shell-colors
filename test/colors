@@ -1,0 +1,10 @@
+#!/usr/bin/env bats
+
+. $(bin/get-colors-lib-path)
+
+@test 'should return the expected ANSI escape sequence' {
+  local A="$(color 0 'black')"
+  local B="$(echo -en '\033[30mblack\033[0m')"
+
+  [ "$A" = "$B" ]
+}
