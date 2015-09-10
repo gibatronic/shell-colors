@@ -1,0 +1,35 @@
+color() {
+  echo -en "\033[3${1}m${2}\033[0m"
+}
+
+color_black() {
+  color 0 $1
+}
+
+color_blue() {
+  color 4 $1
+}
+
+color_cyan() {
+  color 6 $1
+}
+
+color_green() {
+  color 2 $1
+}
+
+color_magenta() {
+  color 5 $1
+}
+
+color_red() {
+  color 1 $1
+}
+
+color_white() {
+  color 7 $1
+}
+
+color_yellow() {
+  color 3 $1
+}
