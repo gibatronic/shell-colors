@@ -1,6 +1,6 @@
 # shell-colors
 
-This is a [basher](https://github.com/basherpm/basher) package that provides convenient functions to handle ANSI escape sequences colors.
+This is a [basher](https://github.com/basherpm/basher) package that provides convenient functions to handle ANSI escape sequences.
 
 ## Usage
 
