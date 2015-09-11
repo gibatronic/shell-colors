@@ -5,7 +5,7 @@ get_library_path() {
 }
 
 resolve_link() {
-  resolve_path $(readlink "$1")
+  resolve_path "$(readlink "$1")"
 }
 
 resolve_path() {
