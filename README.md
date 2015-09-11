@@ -1,4 +1,4 @@
-# shell-colors
+# shell-colors [![Build Status](https://travis-ci.org/gibatronic/shell-colors.svg)](https://travis-ci.org/gibatronic/shell-colors)
 
 This is a [basher](https://github.com/basherpm/basher) package that provides convenient functions to handle ANSI escape sequences.
 
