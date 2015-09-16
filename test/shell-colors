@@ -3,8 +3,29 @@
 . $(bin/shell-colors library-path)
 
 @test 'should return the expected ANSI escape sequence' {
-  local A="$(color 0 'black')"
-  local B="$(echo -en '\033[30mblack\033[0m')"
+  local A=$(color 4 'blue')
+  local B=$(echo -en '\033[34mblue\033[0m')
+
+  echo "A: $A"
+  echo "B: $B"
+
+  [ "$A" = "$B" ]
+}
+
+@test 'should keep any ANSI escape sequence when piped' {
+  local A=$(color 4 'blue' | cat)
+  local B=$(echo -en '\033[34mblue\033[0m')
+
+  [ "$A" = "$B" ]
+}
+
+@test 'should suppres any ANSI escape sequence when redirected' {
+  color 4 'blue' &> test.log
+
+  local A=$(cat test.log)
+  local B=$(echo -en 'blue')
+
+  rm test.log
 
   [ "$A" = "$B" ]
 }
