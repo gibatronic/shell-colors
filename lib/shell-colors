@@ -1,5 +1,13 @@
 color() {
-  echo -en "\033[3${1}m${2}\033[0m"
+  if [ ! -t 1 ] && [ ! -p /dev/stdout ]; then
+    local COLOR=''
+    local RESET=''
+  else
+    local COLOR="\033[3${1}m"
+    local RESET='\033[0m'
+  fi
+
+  echo -en "${COLOR}${2}${RESET}"
 }
 
 color_black() {
